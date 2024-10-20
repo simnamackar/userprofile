@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+    <div>
+      {% for msg in messages %}
+            <h3>{{ msg }}</h3>
+            {% endfor %}
+        </div>
+<section class="h-100 bg-dark">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">
+        <div class="card card-registration my-4">
+          <div class="row g-0">
+            <div class="col-xl-6 d-none d-xl-block">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                alt="Sample photo" class="img-fluid"
+                style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+            </div>
+            <div class="col-xl-6">
+              <div class="card-body p-md-5 text-black">
+                <h3 class="mb-5 text-uppercase">Please enter your qualifications...!</h3>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div data-mdb-input-init class="form-outline">
+                        <label class="form-label" for="form3Example1m">Qualifications:</label>
+                      <input type="text" id="form3Example1m" name="sslc" class="form-control form-control-lg" placeholder="sslc" />
+
+                    </div>
+
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div data-mdb-input-init class="form-outline">
+                         <label class="form-label" for="form3Example1n">percentage:</label>
+                      <input type="text" id="form3Example1n" name="sslcmark" class="form-control form-control-lg" />
+
+                    </div>
+                  </div>
+                </div>
+                 <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div data-mdb-input-init class="form-outline">
+                      <input type="text" id="form3Example2m" name="plustwo" class="form-control form-control-lg"placeholder="plus two"  />
+                    </div>
+
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div data-mdb-input-init class="form-outline">
+                      <input type="text" id="form3Example2n" name="plustwomark" class="form-control form-control-lg" />
+
+                    </div>
+                  </div>
+                </div>
+                 <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div data-mdb-input-init class="form-outline">
+                      <input type="text" id="form3Example3m" name="degree" class="form-control form-control-lg" placeholder="graduation"  />
+
+                    </div>
+
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div data-mdb-input-init class="form-outline">
+                      <input type="text" id="form3Example3n" name="degreemark" class="form-control form-control-lg" />
+
+                    </div>
+                  </div>
+                </div>
+                 <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div data-mdb-input-init class="form-outline">
+                      <input type="text" id="form3Example4m" name="pg" class="form-control form-control-lg" placeholder="post graduation" />
+
+                    </div>
+
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div data-mdb-input-init class="form-outline">
+                      <input type="text" id="form3Example4n" name="pgmark" class="form-control form-control-lg" />
+
+                    </div>
+                  </div>
+                </div>
+              <div class="d-flex justify-content-end pt-3">
+                  <button  type="button" value="reset" class="form-floating mb-3 btn btn-warning">Reset all</button>
+<!--                  <button  type="button"  value="personaldetails" data-mdb-button-init data-mdb-ripple-init class="btn btn-warning btn-lg ms-2">Submit form</button>-->
+                <input type="submit" value="qualifications" class="form-floating mb-3  btn btn-success" >
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+</form>
+</body>
+</html>
